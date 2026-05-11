@@ -1,0 +1,30 @@
+{
+  "name": "IMS Scholar",
+  "short_name": "IMS Scholar",
+  "description": "AI-powered MUT academic document generator.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#020d06",
+  "theme_color": "#020d06",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/social-card.svg",
+      "sizes": "1200x630",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "IMS Scholar app preview"
+    }
+  ]
+}
