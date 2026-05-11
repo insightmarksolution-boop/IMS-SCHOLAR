@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="IMS Scholar social preview">
+  <defs>
+    <radialGradient id="bg" cx="70%" cy="40%" r="80%">
+      <stop offset="0" stop-color="#094b29"/>
+      <stop offset="0.45" stop-color="#041a0c"/>
+      <stop offset="1" stop-color="#020504"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1a3"/><stop offset="0.55" stop-color="#d6a93b"/><stop offset="1" stop-color="#7b5013"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9bff8f"/><stop offset="0.6" stop-color="#00ff88"/><stop offset="1" stop-color="#008f45"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity=".14" stroke="#00ff88" fill="none">
+    <path d="M0 525h1200M0 420h1200M0 315h1200M0 210h1200M0 105h1200"/>
+    <path d="M120 0v630M240 0v630M360 0v630M480 0v630M600 0v630M720 0v630M840 0v630M960 0v630M1080 0v630"/>
+  </g>
+  <rect x="82" y="92" width="172" height="172" rx="42" fill="#020d06" stroke="url(#gold)" stroke-width="6"/>
+  <path d="M168 132 98 164l70 30 70-30z" fill="url(#gold)"/>
+  <path d="M118 190c25-16 50-15 50-15s25-1 50 15v45c-24-15-50-13-50-13s-26-2-50 13z" fill="#04140b" stroke="url(#green)" stroke-width="5"/>
+  <text x="168" y="244" text-anchor="middle" font-family="Arial Black, Arial" font-size="46" fill="url(#gold)">IMS</text>
+  <text x="300" y="160" font-family="Arial Black, Arial" font-size="78" fill="#fff">IMS</text>
+  <text x="300" y="244" font-family="Arial Black, Arial" font-size="78" fill="url(#green)">SCHOLAR</text>
+  <text x="303" y="304" font-family="Arial, sans-serif" font-size="32" fill="#9bffb6" letter-spacing="4">AI-POWERED ACADEMIC DOCUMENT GENERATOR</text>
+  <text x="84" y="398" font-family="Arial Black, Arial" font-size="46" fill="#fff">Your Academic Success,</text>
+  <text x="84" y="456" font-family="Arial Black, Arial" font-size="46" fill="#65ff84">Powered by AI.</text>
+  <text x="84" y="512" font-family="Arial, sans-serif" font-size="27" fill="#d8ffe3">Practicum Reports · Schemes of Work · Lesson Plans · Records of Work</text>
+  <g transform="translate(790 88)">
+    <rect width="300" height="480" rx="52" fill="#030a07" stroke="url(#green)" stroke-width="8"/>
+    <text x="150" y="70" text-anchor="middle" font-family="Arial Black, Arial" font-size="28" fill="#fff">IMS <tspan fill="#00ff88">SCHOLAR</tspan></text>
+    <rect x="38" y="120" width="96" height="96" rx="18" fill="#06170d" stroke="#1cff83"/>
+    <rect x="166" y="120" width="96" height="96" rx="18" fill="#06170d" stroke="#d6a93b"/>
+    <rect x="38" y="248" width="96" height="96" rx="18" fill="#06170d" stroke="#62d4ff"/>
+    <rect x="166" y="248" width="96" height="96" rx="18" fill="#06170d" stroke="#b96cff"/>
+    <text x="86" y="181" text-anchor="middle" font-size="42">📄</text>
+    <text x="214" y="181" text-anchor="middle" font-size="42">📋</text>
+    <text x="86" y="309" text-anchor="middle" font-size="42">📖</text>
+    <text x="214" y="309" text-anchor="middle" font-size="42">📊</text>
+    <rect x="42" y="400" width="216" height="50" rx="14" fill="url(#green)"/>
+    <text x="150" y="434" text-anchor="middle" font-family="Arial Black, Arial" font-size="18" fill="#021006">GET STARTED</text>
+  </g>
+</svg>
