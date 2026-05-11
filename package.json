@@ -1,0 +1,13 @@
+{
+  "name": "ims-scholar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Installable IMS Scholar PWA with a serverless Gemini backend.",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check api/generate.js && node --check server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
