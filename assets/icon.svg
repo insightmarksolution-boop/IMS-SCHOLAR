@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="IMS Scholar icon">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#06351f"/>
+      <stop offset="0.65" stop-color="#020d06"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1a3"/>
+      <stop offset="0.5" stop-color="#d6a93b"/>
+      <stop offset="1" stop-color="#7b5013"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9bff8f"/>
+      <stop offset="0.55" stop-color="#00ff88"/>
+      <stop offset="1" stop-color="#008f45"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="20" y="20" width="472" height="472" rx="84" fill="url(#bg)" stroke="url(#gold)" stroke-width="12"/>
+  <path d="M126 210c64-42 130-40 130-40s66-2 130 40v95c-63-40-130-35-130-35s-67-5-130 35z" fill="#04140b" stroke="url(#green)" stroke-width="10" filter="url(#glow)"/>
+  <path d="M256 124 106 186l150 62 150-62z" fill="url(#gold)" stroke="#ffe88a" stroke-width="5"/>
+  <path d="M172 210v40c52-24 84-20 84-20s32-4 84 20v-40l-84 34z" fill="#8b611f" stroke="#ffd66f" stroke-width="4"/>
+  <path d="M390 190v78" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="390" cy="279" r="13" fill="url(#gold)"/>
+  <path d="M374 298h32l-16 45z" fill="url(#gold)"/>
+  <text x="256" y="390" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="112" fill="url(#gold)" letter-spacing="8">IMS</text>
+  <text x="256" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#93ff9b" letter-spacing="14">SCHOLAR</text>
+</svg>
