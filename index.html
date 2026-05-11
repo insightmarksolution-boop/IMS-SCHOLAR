@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IMS Scholar - MUT Document Generator</title>
+  <meta name="description" content="AI-powered MUT academic document generator for practicum reports, schemes of work, lesson plans, records of work and progress records.">
+  <meta name="theme-color" content="#020d06">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="IMS Scholar">
+  <meta property="og:title" content="IMS Scholar">
+  <meta property="og:description" content="AI-powered academic document generator for MUT students.">
+  <meta property="og:image" content="/assets/social-card.svg">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icon.svg">
+  <style>
+    :root{--bg:#020d06;--panel:#041a0c;--line:rgba(0,255,136,.18);--soft:rgba(0,255,136,.07);--green:#00ff88;--green2:#00cc66;--gold:#d6a93b;--text:#e4ffe9;--muted:#8ee5a6;--danger:#ff8e8e}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(circle at 70% 0,rgba(0,255,136,.11),transparent 38%),linear-gradient(180deg,#031108,#010503);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(0,255,136,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,136,.035) 1px,transparent 1px);background-size:42px 42px;pointer-events:none}.wrap{position:relative;z-index:1;width:min(940px,100%);margin:auto;padding:22px 16px 42px}.top{text-align:center;padding:12px 0 18px}.logo{width:88px;height:88px;margin:auto;border-radius:24px;display:block;filter:drop-shadow(0 0 24px rgba(0,255,136,.3))}.title{margin:14px 0 4px;font-size:clamp(30px,8vw,54px);letter-spacing:.12em;line-height:1;color:var(--green);font-weight:900;text-shadow:0 0 22px rgba(0,255,136,.45)}.sub{color:var(--muted);letter-spacing:.35em;text-transform:uppercase;font-size:12px}.badge{display:inline-flex;margin-top:14px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px;letter-spacing:.12em;background:rgba(0,255,136,.035)}.strip{display:flex;gap:10px;align-items:center;justify-content:space-between;margin:16px auto 22px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:rgba(0,255,136,.04);max-width:640px}.status{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.install{display:none}.install.show{display:inline-flex}.steps{display:flex;justify-content:center;gap:8px;margin:0 0 18px}.dot{width:8px;height:8px;border-radius:20px;background:rgba(0,255,136,.2)}.dot.on{width:30px;background:var(--green);box-shadow:0 0 14px rgba(0,255,136,.7)}.dot.done{background:var(--green2)}.screen{display:none;animation:rise .25s ease}.screen.active{display:block}@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}.h{margin:18px 0 12px;color:var(--green);font-size:13px;letter-spacing:.2em;text-transform:uppercase}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card,.panel{border:1px solid var(--line);background:rgba(0,255,136,.045);border-radius:12px}.card{min-height:126px;padding:18px 14px;text-align:center;cursor:pointer;transition:.18s ease}.card:hover,.card.selected{border-color:var(--green);box-shadow:0 0 26px rgba(0,255,136,.18);transform:translateY(-2px);background:rgba(0,255,136,.075)}.card.wide{grid-column:1/-1;min-height:auto;text-align:left;display:flex;align-items:center;gap:14px}.mark{width:42px;height:42px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;margin:0 auto 12px;color:var(--gold);font-weight:900;background:#031108}.wide .mark{margin:0;flex:0 0 auto}.name{font-size:16px;font-weight:900;color:var(--green);text-transform:uppercase;letter-spacing:.04em}.desc{font-size:12px;color:var(--muted);line-height:1.45;margin-top:5px}.panel{padding:16px;margin-bottom:14px}.panel-title{padding-bottom:10px;margin-bottom:14px;border-bottom:1px solid rgba(0,255,136,.1);font-size:12px;color:var(--green2);letter-spacing:.18em;text-transform:uppercase;font-weight:800}.row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{margin-bottom:13px}.field:last-child{margin-bottom:0}label{display:block;margin-bottom:6px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.16em;font-weight:800}input,select,textarea{width:100%;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.24);color:var(--text);font:inherit;padding:12px 13px;outline:none}textarea{min-height:88px;resize:vertical;line-height:1.5}input:focus,select:focus,textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,255,136,.08)}button{border:1px solid var(--line);border-radius:10px;background:rgba(0,255,136,.06);color:var(--green);font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:12px 14px;cursor:pointer}button:hover{border-color:var(--green);box-shadow:0 0 20px rgba(0,255,136,.18)}.primary{width:100%;border:0;background:linear-gradient(135deg,#009944,#00ff88);color:#021006}.back{margin-bottom:14px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.error{display:none;margin:0 0 14px;padding:12px;border:1px solid rgba(255,80,80,.35);border-radius:10px;background:rgba(255,60,60,.08);color:var(--danger);font-size:13px;line-height:1.5}.loader{text-align:center;padding:68px 10px}.ring{width:80px;height:80px;margin:0 auto 22px;border-radius:50%;border:2px solid rgba(0,255,136,.12);border-top-color:var(--green);animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.bar{height:3px;background:rgba(0,255,136,.12);border-radius:4px;overflow:hidden;margin-top:22px}.fill{height:100%;width:0;background:linear-gradient(90deg,#009944,#00ff88);transition:width .3s}.output-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(0,255,136,.06)}.pulse{width:11px;height:11px;border-radius:50%;background:var(--green);box-shadow:0 0 16px var(--green)}.meta{color:var(--muted);font-size:12px;margin-top:3px}.preview{max-height:52vh;overflow:auto;white-space:pre-wrap;line-height:1.7;padding:16px;border:1px solid rgba(0,255,136,.13);border-radius:12px;background:rgba(0,0,0,.36);color:#c9ffd6;margin-bottom:12px}.saved-empty{display:none;padding:14px;border:1px dashed var(--line);border-radius:12px;text-align:center;color:var(--muted);font-size:13px}.saved-list{display:grid;gap:10px}.saved-item{padding:13px;border:1px solid var(--line);border-radius:12px;background:rgba(0,255,136,.04)}.saved-top{display:flex;justify-content:space-between;gap:10px;align-items:start}.saved-title{color:var(--green);font-weight:900}.saved-meta{color:var(--muted);font-size:12px;margin:4px 0 10px}.saved-buttons{display:flex;gap:8px;flex-wrap:wrap}.small{padding:8px 10px;font-size:11px}.danger{color:var(--danger);border-color:rgba(255,90,90,.35)}.foot{text-align:center;margin-top:28px;padding-top:18px;border-top:1px solid rgba(0,255,136,.11);color:var(--muted);font-size:12px;letter-spacing:.08em}.hide{display:none!important}@media(max-width:640px){.grid,.row,.actions{grid-template-columns:1fr}.title{letter-spacing:.08em}.strip{align-items:stretch;flex-direction:column}.install.show{display:flex;justify-content:center}.card.wide{align-items:flex-start}.wrap{padding-inline:14px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <img class="logo" src="/assets/icon.svg" alt="IMS Scholar">
+      <div class="title">IMS SCHOLAR</div>
+      <div class="sub">AI Document Generator</div>
+      <div class="badge">MURANG'A UNIVERSITY OF TECHNOLOGY - MUT/F/TP/03</div>
+    </header>
+
+    <div class="strip">
+      <div class="status" id="status">Backend secured - Ready</div>
+      <button class="install" id="installBtn" type="button">Install App</button>
+    </div>
+
+    <section class="screen active" id="screen1">
+      <div class="steps"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="h">Select Document Type</div>
+      <div class="grid" id="docGrid"></div>
+      <div class="h">Saved Documents</div>
+      <div class="saved-empty" id="savedEmpty">No saved documents yet.</div>
+      <div class="saved-list" id="savedList"></div>
+    </section>
+
+    <section class="screen" id="screen2">
+      <div class="steps"><span class="dot done"></span><span class="dot on"></span><span class="dot"></span></div>
+      <button class="back" type="button" onclick="showScreen('screen1')">Back</button>
+      <div class="h" id="formTitle">Document Details</div>
+      <div class="panel">
+        <div class="panel-title">Student Information</div>
+        <div class="field"><label for="studentName">Full Name</label><input id="studentName" placeholder="e.g. John Kamau Mwangi"></div>
+        <div class="row">
+          <div class="field"><label for="regNo">Reg. Number</label><input id="regNo" placeholder="EH200/XXXX/2023"></div>
+          <div class="field"><label for="term">Term</label><select id="term"><option>Term 1</option><option selected>Term 2</option><option>Term 3</option></select></div>
+        </div>
+        <div class="field"><label for="school">School of Attachment</label><input id="school" placeholder="e.g. Gataara Junior Secondary School"></div>
+        <div class="row">
+          <div class="field"><label for="subject">Subject</label><select id="subject"><option>Mathematics</option><option>Integrated Science</option><option>English</option><option>Kiswahili</option><option>Social Studies</option><option>Creative Arts and Sports</option><option>Physical and Health Education</option><option>Agriculture</option><option>Home Science</option><option>Business Studies</option><option>Pre-Technical and Pre-Career Education</option><option>Religious Education</option></select></div>
+          <div class="field"><label for="grade">Grade</label><select id="grade"><option>Grade 7</option><option>Grade 8</option><option>Grade 9</option></select></div>
+        </div>
+      </div>
+
+      <div class="panel" id="topicPanel">
+        <div class="panel-title">Topic Details</div>
+        <div class="field"><label for="topic">Topic / Strand</label><input id="topic" placeholder="e.g. Fractions and Decimals"></div>
+        <div class="field"><label for="subtopic">Sub-topic / Sub-strand</label><input id="subtopic" placeholder="e.g. Addition of fractions"></div>
+      </div>
+
+      <div class="panel" id="settingsPanel">
+        <div class="panel-title">Document Settings</div>
+        <div class="row">
+          <div class="field"><label for="amount">Length / Count</label><select id="amount"><option value="standard">Standard</option><option value="detailed" selected>Detailed</option><option value="very detailed">Very Detailed</option></select></div>
+          <div class="field"><label for="weekNo">Week / Lesson Number</label><input id="weekNo" placeholder="e.g. Week 3 or Lesson 2"></div>
+        </div>
+        <div class="field"><label for="extra">Additional Instructions</label><textarea id="extra" placeholder="e.g. Focus on learner-centred activities, CBC competencies, assessment and reflection."></textarea></div>
+      </div>
+
+      <div class="error" id="errorBox"></div>
+      <button class="primary" type="button" onclick="generateDoc()">Generate Document</button>
+    </section>
+
+    <section class="screen" id="screen3">
+      <div class="steps"><span class="dot done"></span><span class="dot done"></span><span class="dot on"></span></div>
+      <div class="loader">
+        <div class="ring"></div>
+        <div class="h">Generating Document</div>
+        <div class="meta" id="loadingMsg">Connecting to Gemini AI...</div>
+        <div class="bar"><div class="fill" id="progressFill"></div></div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen4">
+      <div class="steps"><span class="dot done"></span><span class="dot done"></span><span class="dot on"></span></div>
+      <div class="output-head"><span class="pulse"></span><div><strong>Document Generated Successfully</strong><div class="meta" id="outputMeta"></div></div></div>
+      <div class="preview" id="docPreview"></div>
+      <div class="actions"><button type="button" onclick="downloadDoc('doc')">Download Word</button><button type="button" onclick="downloadDoc('txt')">Download Text</button></div>
+      <div class="actions" style="margin-top:10px"><button type="button" onclick="copyDoc()">Copy</button><button type="button" onclick="printDoc()">Print / Save PDF</button></div>
+      <button style="width:100%;margin-top:10px" type="button" onclick="startOver()">Generate Another Document</button>
+    </section>
+
+    <footer class="foot">INSIGHTSMARK SOLUTIONS - AI HUB</footer>
+  </main>
+
+  <script>
+    const docs = [
+      ['Practicum Report','PR','Full practicum report with sections, reflection and appendices.'],
+      ['Scheme of Work','SW','MUT/F/TP/03 table with outcomes, activities and resources.'],
+      ['Lesson Plan','LP','CBC lesson plan with K/S/A outcomes and development table.'],
+      ['Record of Work','RW','Daily work record with strand, activities and reflection.'],
+      ['Student Progress Record','SP','CBC progress record with 1-5 achievement levels.']
+    ];
+    const savedKey = 'ims-scholar-documents-v1';
+    let selectedDoc = '';
+    let generatedContent = '';
+    let currentDocument = null;
+    let progressTimer = null;
+    let installPrompt = null;
+
+    const $ = id => document.getElementById(id);
+    const value = id => ($(id)?.value || '').trim();
+
+    function init(){
+      renderDocCards();
+      renderSavedDocs();
+      setupPwa();
+      if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(() => setStatus('Ready - offline cache pending'));
+    }
+
+    function renderDocCards(){
+      $('docGrid').innerHTML = docs.map(([name,mark,desc], index) => `<button class="card ${index===4?'wide':''}" type="button" onclick="selectDoc('${name}', this)"><span class="mark">${mark}</span><span><span class="name">${name}</span><span class="desc">${desc}</span></span></button>`).join('');
+    }
+
+    function setupPwa(){
+      const installBtn = $('installBtn');
+      window.addEventListener('online', () => setStatus('Backend secured - Ready'));
+      window.addEventListener('offline', () => setStatus('Offline - saved docs available'));
+      window.addEventListener('beforeinstallprompt', event => { event.preventDefault(); installPrompt = event; installBtn.classList.add('show'); });
+      installBtn.addEventListener('click', async () => { if(!installPrompt) return; installPrompt.prompt(); await installPrompt.userChoice; installPrompt = null; installBtn.classList.remove('show'); });
+      window.addEventListener('appinstalled', () => { setStatus('Installed - Ready'); installBtn.classList.remove('show'); });
+    }
+
+    function setStatus(text){ $('status').textContent = text; }
+    function showScreen(id){ document.querySelectorAll('.screen').forEach(s => s.classList.remove('active')); $(id).classList.add('active'); scrollTo({top:0,behavior:'smooth'}); }
+    function showError(text){ $('errorBox').textContent = text; $('errorBox').style.display = 'block'; }
+    function hideError(){ $('errorBox').style.display = 'none'; }
+
+    function selectDoc(type, element){
+      selectedDoc = type;
+      document.querySelectorAll('.card').forEach(card => card.classList.remove('selected'));
+      element.classList.add('selected');
+      $('formTitle').textContent = type + ' - Details';
+      $('topicPanel').classList.toggle('hide', type === 'Practicum Report' || type === 'Student Progress Record');
+      showScreen('screen2');
+    }
+
+    function collectData(){
+      return { name:value('studentName'), reg:value('regNo'), school:value('school'), term:value('term'), subject:value('subject'), grade:value('grade'), topic:value('topic'), subtopic:value('subtopic'), amount:value('amount'), weekNo:value('weekNo'), extra:value('extra') };
+    }
+
+    async function generateDoc(){
+      const d = collectData();
+      if(!selectedDoc) return showError('Please select a document type.');
+      if(!d.name) return showError('Please enter the student full name.');
+      if(!d.reg) return showError('Please enter the registration number.');
+      if(!d.school) return showError('Please enter the school of attachment.');
+
+      hideError();
+      showScreen('screen3');
+      startProgress();
+      const messages = ['Connecting to Gemini AI...','Analysing MUT format...','Applying CBC framework...','Structuring sections...','Finalising document...'];
+      let i = 0;
+      const msgTimer = setInterval(() => { i = (i + 1) % messages.length; $('loadingMsg').textContent = messages[i]; }, 2400);
+
+      try{
+        const res = await fetch('/api/generate', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ documentType:selectedDoc, prompt:buildPrompt(selectedDoc,d), context:d }) });
+        const data = await res.json().catch(() => ({}));
+        clearInterval(msgTimer); stopProgress();
+        if(!res.ok){ showScreen('screen2'); return showError('Generation error: ' + (data.error || 'Check the Vercel environment variables.')); }
+        generatedContent = data.content || 'No content generated. Please try again.';
+        currentDocument = saveDocument({ ...d, docType:selectedDoc, content:generatedContent, createdAt:new Date().toISOString(), model:data.model || 'Gemini' });
+        $('docPreview').textContent = generatedContent;
+        $('outputMeta').textContent = `${selectedDoc} - ${d.subject} - ${d.grade} - Saved`;
+        renderSavedDocs();
+        showScreen('screen4');
+      }catch(error){
+        clearInterval(msgTimer); stopProgress(); showScreen('screen2'); showError('Network error. Please check your internet connection and try again.');
+      }
+    }
+
+    function buildPrompt(type,d){
+      const topic = d.topic || d.subject;
+      const subtopic = d.subtopic || 'relevant sub-strand';
+      const extra = d.extra ? `\nExtra instructions: ${d.extra}` : '';
+      const base = `You are a highly qualified Kenyan teacher educator preparing a complete ${type} for a student teacher at Murang'a University of Technology.\n\nStudent: ${d.name}\nRegistration: ${d.reg}\nSchool: ${d.school}\nSubject/Learning Area: ${d.subject}\nGrade: ${d.grade}\nTerm: ${d.term}\nTopic: ${topic}\nSubtopic: ${subtopic}\nQuality level: ${d.amount}\nWeek/Lesson note: ${d.weekNo || 'not specified'}${extra}\n\nUse professional Kenyan CBC language, MUT formatting, clear tables where useful, realistic school details, and enough depth for assessment. Avoid placeholders unless a signature/date blank is required.`;
+      const map = {
+        'Practicum Report':'Generate a full practicum report with title page details, acknowledgements, introduction, school profile, teaching activities, lesson observation, assessment methods, challenges, solutions, professional growth, conclusion, recommendations and appendices list.',
+        'Scheme of Work':'Generate a complete scheme of work table with columns: Week, Lesson, Strand, Sub-strand, Learning Outcome, Key Inquiry Question, Learning Experiences, Learning Resources, Assessment and Reflection. Make at least 4 weeks with progressive lessons.',
+        'Lesson Plan':'Generate a complete MUT lesson plan with K/S/A specific learning outcomes, core competencies, core values, PCI, learning resources, introduction, lesson development table, formative assessment, conclusion, assignment and reflection space.',
+        'Record of Work':'Generate a complete record of work table with Date, Lesson Strand and Sub-strand, Activity and Reflection. Include detailed professional reflections and progression across the week.',
+        'Student Progress Record':'Generate a progress record with realistic learner names, achievement levels 1 to 5, core competencies achieved, class performance analysis and intervention recommendations.'
+      };
+      return base + '\n\nDocument requirements:\n' + (map[type] || `Generate a complete ${type}.`);
+    }
+
+    function startProgress(){ let pct = 0; $('progressFill').style.width = '0%'; progressTimer = setInterval(() => { pct = Math.min(92, pct + (92-pct)*0.05); $('progressFill').style.width = pct + '%'; }, 350); }
+    function stopProgress(){ clearInterval(progressTimer); $('progressFill').style.width = '100%'; }
+
+    function getSaved(){ try{return JSON.parse(localStorage.getItem(savedKey) || '[]')}catch{return []} }
+    function putSaved(items){ localStorage.setItem(savedKey, JSON.stringify(items.slice(0,20))); }
+    function saveDocument(doc){ const item = { id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()), ...doc }; putSaved([item, ...getSaved()]); setStatus('Saved - Ready'); return item; }
+
+    function renderSavedDocs(){
+      const items = getSaved();
+      $('savedEmpty').style.display = items.length ? 'none' : 'block';
+      $('savedList').innerHTML = items.slice(0,6).map(item => `<div class="saved-item"><div class="saved-top"><div><div class="saved-title">${escapeHtml(item.docType)}</div><div class="saved-meta">${escapeHtml(item.name || 'Student')} - ${escapeHtml(item.subject || 'Subject')} - ${new Date(item.createdAt).toLocaleString()}</div></div></div><div class="saved-buttons"><button class="small" onclick="openSaved('${item.id}')">Open</button><button class="small" onclick="downloadDoc('doc', '${item.id}')">Word</button><button class="small" onclick="downloadDoc('txt', '${item.id}')">Text</button><button class="small danger" onclick="deleteSaved('${item.id}')">Delete</button></div></div>`).join('');
+    }
+
+    function openSaved(id){ const item = getSaved().find(x => x.id === id); if(!item) return; currentDocument = item; selectedDoc = item.docType; generatedContent = item.content; $('docPreview').textContent = generatedContent; $('outputMeta').textContent = `${item.docType} - ${item.subject || 'Subject'} - Saved`; showScreen('screen4'); }
+    function deleteSaved(id){ putSaved(getSaved().filter(x => x.id !== id)); renderSavedDocs(); setStatus('Deleted - Ready'); }
+
+    function downloadDoc(format='txt', id){
+      const doc = id ? getSaved().find(x => x.id === id) : currentDocument;
+      const item = doc || { docType:selectedDoc || 'Document', name:value('studentName') || 'Student', content:generatedContent, createdAt:new Date().toISOString() };
+      if(!item.content) return;
+      const isWord = format === 'doc';
+      const blob = new Blob([isWord ? wordHtml(item) : item.content], { type: isWord ? 'application/msword;charset=utf-8' : 'text/plain;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = fileName(item, isWord ? 'doc' : 'txt');
+      document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(a.href);
+    }
+
+    function fileName(doc, ext){ const clean = v => String(v || 'Document').replace(/[^a-z0-9]+/gi,'_').replace(/^_+|_+$/g,'').slice(0,45); return `IMS_Scholar_${clean(doc.docType)}_${clean(doc.name || 'Student')}_${(doc.createdAt || new Date().toISOString()).slice(0,10)}.${ext}`; }
+    function wordHtml(doc){ return `<!doctype html><html><head><meta charset="utf-8"><title>${escapeHtml(doc.docType)}</title><style>body{font-family:Cambria,Georgia,serif;font-size:12pt;line-height:1.55;color:#111}h1{text-align:center;font-size:18pt}pre{white-space:pre-wrap;font-family:Cambria,Georgia,serif}</style></head><body><h1>${escapeHtml(doc.docType)}</h1><pre>${escapeHtml(doc.content)}</pre></body></html>`; }
+    function copyDoc(){ const text = currentDocument?.content || generatedContent; if(!text) return; navigator.clipboard?.writeText(text).then(() => setStatus('Copied - Ready')); }
+    function printDoc(){ const doc = currentDocument || { docType:selectedDoc || 'Document', content:generatedContent }; if(!doc.content) return; const win = open('', '_blank'); if(!win) return showError('Allow pop-ups to print or save PDF.'); win.document.write(wordHtml(doc)); win.document.close(); win.focus(); setTimeout(() => win.print(), 250); }
+    function startOver(){ currentDocument = null; generatedContent = ''; selectedDoc = ''; document.querySelectorAll('.card').forEach(card => card.classList.remove('selected')); hideError(); showScreen('screen1'); }
+    function escapeHtml(text=''){ return String(text).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+    init();
+  </script>
+</body>
+</html>
